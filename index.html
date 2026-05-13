@@ -121,12 +121,12 @@ section{padding:5rem 3rem;}
 .partners-bg{background:var(--navy2);border-top:0.5px solid var(--navy-border);border-bottom:0.5px solid var(--navy-border);}
 .partners-header{text-align:center;margin-bottom:3rem;}
 .partners-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;}
-.partner-chip{background:var(--navy-card);border:0.5px solid var(--navy-border);border-radius:12px;padding:14px 16px;display:flex;align-items:center;justify-content:center;min-height:60px;transition:all .3s;position:relative;overflow:hidden;}
+.partner-chip{background:#ffffff;border:0.5px solid var(--navy-border);border-radius:12px;padding:14px 16px;display:flex;align-items:center;justify-content:center;min-height:60px;transition:all .3s;position:relative;overflow:hidden;}
 .partner-chip::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(201,168,76,0.08),transparent);opacity:0;transition:opacity .3s;}
 .partner-chip:hover{border-color:var(--gold-dim);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.3),0 0 0 1px rgba(201,168,76,0.1);}
 .partner-chip:hover::before{opacity:1;}
-.partner-chip img{max-height:30px;max-width:100px;object-fit:contain;filter:grayscale(100%) brightness(0) invert(1);opacity:0.6;transition:all .3s;}
-.partner-chip:hover img{opacity:1;filter:none;}
+.partner-chip img{max-height:30px;max-width:100px;object-fit:contain;opacity:0.85;transition:all .3s;}
+.partner-chip:hover img{opacity:1;transform:scale(1.05);}
 .partner-chip span{font-size:11px;font-weight:400;color:var(--muted);text-align:center;line-height:1.4;transition:color .3s;}
 .partner-chip:hover span{color:var(--white);}
 .partner-divider{grid-column:1/-1;height:0.5px;background:var(--navy-border);margin:8px 0;}
@@ -364,9 +364,9 @@ footer .fc{font-size:11px;color:var(--muted);}
     <div class="partner-chip reveal" style="transition-delay:.32s"><img src="assets/logo-inmax.webp" alt="Inmax Property"><span style="display:none">Inmax Property</span></div>
     <div class="partner-divider"></div>
     <div class="partner-group-label">Koperasi</div>
-    <div class="partner-chip reveal" style="transition-delay:.34s"><img src="assets/logo-koperasi.jpg" alt="Kop. Jaya Mandiri"><span style="display:none;display:flex;flex-direction:column;align-items:center;gap:2px"><span style="font-size:11px;color:var(--muted)">Kop. Jaya Mandiri</span></span></div>
-    <div class="partner-chip reveal" style="transition-delay:.36s"><img src="assets/logo-koperasi.jpg" alt="Kop. Adil Makmur"><span style="display:none">Kop. Adil Makmur</span></div>
-    <div class="partner-chip reveal" style="transition-delay:.38s"><img src="assets/logo-koperasi.jpg" alt="Kop. Buana Makmur"><span style="display:none">Kop. Buana Makmur</span></div>
+    <div class="partner-chip reveal" style="transition-delay:.34s;flex-direction:column;gap:4px;"><img src="assets/logo-koperasi.jpg" alt="Kop. Jaya Mandiri" style="max-height:24px"><span style="display:block;font-size:10px;color:#555;text-align:center">Jaya Mandiri</span></div>
+    <div class="partner-chip reveal" style="transition-delay:.36s;flex-direction:column;gap:4px;"><img src="assets/logo-koperasi.jpg" alt="Kop. Adil Makmur" style="max-height:24px"><span style="display:block;font-size:10px;color:#555;text-align:center">Adil Makmur</span></div>
+    <div class="partner-chip reveal" style="transition-delay:.38s;flex-direction:column;gap:4px;"><img src="assets/logo-koperasi.jpg" alt="Kop. Buana Makmur" style="max-height:24px"><span style="display:block;font-size:10px;color:#555;text-align:center">Buana Makmur</span></div>
   </div>
 </section>
 
@@ -440,8 +440,11 @@ footer .fc{font-size:11px;color:var(--muted);}
 <script>
 // Scroll reveal
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); }});
-}, {threshold:0.1, rootMargin:'0px 0px -40px 0px'});
+  entries.forEach(e => {
+    if(e.isIntersecting){ e.target.classList.add('visible'); }
+    else { e.target.classList.remove('visible'); }
+  });
+}, {threshold:0.08, rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(el => observer.observe(el));
 
 // Nav shadow on scroll
