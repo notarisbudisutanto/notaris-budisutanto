@@ -143,7 +143,7 @@ section{padding:5rem 3rem;}
 /* GALLERY */
 .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
 .gallery-item{border-radius:14px;overflow:hidden;aspect-ratio:4/3;position:relative;background:var(--navy-card);}
-.gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;filter:brightness(0.75) saturate(0.85);}
+.gallery-item img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block;transition:transform .5s ease;filter:brightness(0.75) saturate(0.85);}
 .gallery-item:hover img{transform:scale(1.08);filter:brightness(0.85) saturate(1);}
 .gallery-item .gcap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(10,17,40,0.9));padding:14px 12px 12px;font-size:12px;color:var(--white);transform:translateY(4px);transition:transform .3s;}
 .gallery-item:hover .gcap{transform:translateY(0);}
@@ -376,9 +376,9 @@ footer .fc{font-size:11px;color:var(--muted);}
     <div class="partner-chip reveal" style="transition-delay:.32s"><img src="assets/logo-inmax.png" alt="Inmax Property"><span>Inmax Property</span></div>
     <div class="partner-divider"></div>
     <div class="partner-group-label">Koperasi</div>
-    <div class="partner-chip reveal" style="transition-delay:.34s;flex-direction:column;gap:4px;"><img src="assets/logo-koperasi.png" alt="Kop. Jaya Mandiri" style="max-height:24px"><span style="display:block;font-size:10px;color:#555;text-align:center">Jaya Mandiri</span></div>
-    <div class="partner-chip reveal" style="transition-delay:.36s;flex-direction:column;gap:4px;"><img src="assets/logo-koperasi.png" alt="Kop. Adil Makmur" style="max-height:24px"><span style="display:block;font-size:10px;color:#555;text-align:center">Adil Makmur</span></div>
-    <div class="partner-chip reveal" style="transition-delay:.38s;flex-direction:column;gap:4px;"><img src="assets/logo-koperasi.png" alt="Kop. Buana Makmur" style="max-height:24px"><span style="display:block;font-size:10px;color:#555;text-align:center">Buana Makmur</span></div>
+    <div class="partner-chip reveal" style="transition-delay:.34s;flex-direction:column;gap:4px;"><img src="assets/logo-koperasi.png" alt="Kop. Jaya Mandiri"><span style="display:block;font-size:10px;color:#555;text-align:center">Jaya Mandiri</span></div>
+    <div class="partner-chip reveal" style="transition-delay:.36s;flex-direction:column;gap:4px;"><img src="assets/logo-koperasi.png" alt="Kop. Adil Makmur"><span style="display:block;font-size:10px;color:#555;text-align:center">Adil Makmur</span></div>
+    <div class="partner-chip reveal" style="transition-delay:.38s;flex-direction:column;gap:4px;"><img src="assets/logo-koperasi.png" alt="Kop. Buana Makmur"><span style="display:block;font-size:10px;color:#555;text-align:center">Buana Makmur</span></div>
   </div>
 </section>
 
@@ -397,7 +397,7 @@ footer .fc{font-size:11px;color:var(--muted);}
   <div class="sec-title reveal">Fasilitas kantor kami</div>
   <div class="sec-sub reveal">Kantor representatif di Jl. Karya Timur No.48, Blimbing, Kota Malang</div>
   <div class="gallery-grid">
-    <div class="gallery-item reveal" style="transition-delay:.05s"><img src="assets/kantor-exterior.png" alt="Gedung kantor"><div class="gcap">Gedung Kantor — Jl. Karya Timur No.48</div></div>
+    <div class="gallery-item reveal" style="transition-delay:.05s"><img src="assets/kantor-exterior.png" alt="Gedung kantor" style="object-position:center top;"><div class="gcap">Gedung Kantor — Jl. Karya Timur No.48</div></div>
     <div class="gallery-item reveal" style="transition-delay:.1s"><img src="assets/ruang-rapat.png" alt="Ruang rapat"><div class="gcap">Ruang Rapat</div></div>
     <div class="gallery-item reveal" style="transition-delay:.15s"><img src="assets/ruang-tunggu.png" alt="Ruang tunggu"><div class="gcap">Ruang Tunggu</div></div>
     <div class="gallery-item reveal" style="transition-delay:.2s"><img src="assets/ruang-kerja.png" alt="Ruang kerja"><div class="gcap">Ruang Kerja</div></div>
@@ -423,7 +423,7 @@ footer .fc{font-size:11px;color:var(--muted);}
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
           Jl. Karya Timur No.48, Blimbing
         </div>
-        <a href="https://maps.app.goo.gl/notarisBudiSutanto" onclick="window.open('https://www.google.com/maps/place/Notaris+PPAT+Budi+Sutanto.SH,+M.Kn/@-7.9561,112.6494,17z','_blank');return false;" style="position:absolute;inset:0;z-index:10;display:flex;align-items:flex-end;justify-content:center;padding-bottom:16px;text-decoration:none;">
+        <a href="https://maps.app.goo.gl/notarisBudiSutanto" onclick="window.open('https://www.google.com/maps/place/Notaris+PPAT+Budi+Sutanto.SH,+M.Kn/@-7.9497783,112.6417037,17z/data=!3m1!4b1!4m6!3m5!1s0x2dd629c7c449ba87:0xa701d4c24bfdad1d!8m2!3d-7.9497783!4d112.6417037!16s%2Fg%2F11b6bwdsvc','_blank');return false;" style="position:absolute;inset:0;z-index:10;display:flex;align-items:flex-end;justify-content:center;padding-bottom:16px;text-decoration:none;">
           <span style="background:var(--gold);color:var(--navy);padding:8px 20px;border-radius:20px;font-size:13px;font-weight:500;font-family:var(--sans);box-shadow:0 4px 12px rgba(0,0,0,0.3);">
             🗺 Buka di Google Maps
           </span>
